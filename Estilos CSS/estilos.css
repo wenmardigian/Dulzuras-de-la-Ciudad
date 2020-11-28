@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Raleway:ital,wght@0,500;0,700;0,900;1,500&display=swap');
+
+html {scroll-behavior: smooth;}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'raleway', sans-serif;
+    color: #3F2212;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+/* TIPOGRAFIA */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Playfair', serif;
+    font-weight: 900;
+    color: #3F2212;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h1 span {
+    display: block;
+    font-size:3rem;
+    font-style: italic;
+    font-weight: normal;
+}
+
+h2 {font-size: 3rem;}
+
+h3 {font-size: 2.25rem;}
+
+h4 {font-size: 1.5rem;}
+
+p {font-size: 1rem;}
+.subtitle {
+    font-size: 1.25rem;
+    line-height: 1.4;
+}
+
+a {color: #3F2212;}
+
+
+/* MENU */
+nav {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'raleway', sans-serif;
+    margin-top: 1rem;
+    position: relative;
+    right: 2.7rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #3F2212;
+}
+nav ul{
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    justify-content: center;
+    list-style: none;
+    position: relative;
+    align-items: center;
+}
+nav ul li{
+    display: inline;
+    padding: 0 4vw 0 4vw;
+}
+.logo-menu, .logo-menu div {
+    width: 189px;
+    height: 189px;
+    padding: 0;
+}
+.logo-menu div {
+    background: url('../Imagenes/Logo-Default.svg');
+}
+.logo-default div:hover {
+    background: url('../Imagenes/Logo-Home-Hover.svg');
+}
+
+/*FLEX CONTAINERS*/
+.flex-row{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    margin: 3rem 8%;
+}
+.flex-row-reverse{
+    display: flex;
+    flex-flow: row-reverse wrap;
+    align-items: center;
+    margin: 3rem 8%;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+.flex-column p{
+    padding: 1rem 0;
+}
+
+.left-text{
+    margin-right: 4rem;
+}
+.right-text{
+    margin-left: 4rem;
+}
+
+.flex-column img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+@media screen and (max-width:800px){
+    .flex-row{
+        flex-flow: column;
+    } 
+    .left-text{
+        margin-right: 0rem;
+    }
+    .right-text{
+        margin-left: 0rem;
+    }
+    .flex-column__img{
+        margin: 2rem 0;
+    }
+}
+.flex-wrap{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(165px,1fr));
+    gap: 2rem 2vw;
+    justify-content: center;
+    max-width: 1006px;
+    text-align: center;
+    margin: auto;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding: 0 5vw 0 5vw;
+}
+.flex-wrap li{
+    border-radius: 20px;
+    padding-bottom: 1rem;
+    display: inline-block;
+    background-color: white;
+}
+.flex-wrap li img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+.flex-wrap li p{
+    padding: 0 0.5rem 0 0.5rem;
+}
+
+/*general*/
+.center{
+    text-align: center;
+    padding: 0 5vw 0 5vw;
+}
+.center-btn{
+    display: block;
+    margin: auto;
+}
+button {
+    background-color: #EF7B84;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.75rem 1.5rem;
+    transition: background-color 0.2s;
+    ;
+}
+button:hover{
+    background-color: #A1333E;
+}
+button a {
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+
+/*HOME*/
+.background-circulos{
+    background-image: url("/Imagenes/Circulos_BG.png");
+    background-size: cover;
+}
+
+@media screen and (min-width: 1200px) {
+    .no-margin{
+        margin-top: -4rem;
+    }
+}
+#dulzuras{
+    max-width: 416px;
+}
+.color-bg{
+    background-color: #FDF6F7;
+    padding: 6% 0;
+    margin-bottom: 5%;
+}
+
+.clientes-satisfechos{
+    margin-bottom: 6rem;
+}
+.opiniones{
+    display: flex;
+    flex-flow: row wrap;
+    margin: 3% 5% 2% 5%;
+    justify-content: space-around;
+    list-style: none;
+    align-items: flex-start;
+}
+.opiniones div {
+    display: inline-block;
+    width: 21rem;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 0.625rem;
+    box-shadow: 0px 0.25rem 1.875rem rgba(63, 34, 18, 0.1);
+}
+.opiniones span {
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+
+/* PRODUCTOS */
+.productos{
+    margin: 3rem 2vw 0 2vw;
+    text-align: center;
+}
+.productos>div {
+    padding: 0 10vw 0 10vw;
+}
+.productos h2{
+    padding-bottom: 1rem;
+}
+.grid-productos {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    gap: 2rem 2vw;
+    text-align: center ;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+}
+.grid-productos li{
+    box-shadow: 0px 0.25rem 1.4rem rgba(63, 34, 18, 0.08);
+    border-radius: 20px;
+    padding-bottom: 1rem;
+    transition: box-shadow, 0.5s;
+    overflow: hidden;
+}
+.grid-productos li:hover{
+    box-shadow: 0px 0.5rem 3rem rgba(63, 34, 18, 0.3);
+}
+.grid-productos li p{
+    padding: 0.75rem 1rem 0 1rem;
+}
+.grid-productos span{
+    font-weight: bold;
+}
+.grid-productos li img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s;
+}
+.grid-productos li:hover img {
+    transform: scale(1.05);
+}
+@media screen and (max-width: 512px) {
+    .productos>div {
+        padding: 0 1vw 0 1vw;
+    }
+    .grid-productos {
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+        gap: 3rem 2vw;
+    }
+}
+
+/* TORTAS */
+.galeria-tortas-header{
+    margin-top: 3rem;
+    padding: 0 5vw 3rem 5vw;
+    text-align: center;
+}
+.galeria-tortas-header h2{
+    padding-bottom: 1rem;
+}
+.galeria-tortas-header span{
+    font-weight: bold;
+}
+ul.galeria{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+    gap: 0px;
+}
+ul.galeria img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s;
+}
+.galeria li {
+    position: relative;
+    overflow: hidden;
+}
+.galeria li:hover img{
+    transform: scale(1.1);
+}
+.galeria li div{
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    padding: 0.75rem;
+    width: 100%;
+    background-color: rgba(63, 34, 18, 0.5);
+    color: white;
+    margin: 0;
+    opacity: 0;
+}
+.galeria li:hover div{
+    opacity: 1;
+}
+
+/* ACERCA DE */
+.acerca-de{
+    margin: 3rem 0 2rem;
+}
+.acerca-de h2{
+    text-align: center;
+}
+#foto-patri{
+    max-width: 450px;
+    min-width: 330px;
+}
+#certi-alimentos{
+    max-width: 353px;
+    border: 10px solid #3F2212;
+}
+.certi-alimentos{
+    background-color:#FDF6F7;
+    padding: 4rem 8% 4rem 8%;
+    margin:0;
+}
+
+/* CONTACTO */
+.btn-whatsapp {
+     background-color: #25D366;
+    }
+.form-contacto{
+    margin-top: 3rem;
+    padding: 0 5vw 0 5vw;
+    text-align: center;
+}
+.form-contacto p{
+    margin: 2rem 0 1rem 0;
+}
+.preguntas{
+    margin: 3rem 0 5rem 0;
+    padding: 0 5vw 0 5vw;
+}
+.preguntas h3{
+    text-align: center;
+}
+.preguntas h4{
+    padding: 1.25rem 0 0.625rem 0;
+}
+
+/* FOOTER */
+footer{
+    background-image: linear-gradient(45deg,#EF7B84,#3F2212);
+    height: 10rem;
+}
