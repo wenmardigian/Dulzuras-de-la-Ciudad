@@ -13,31 +13,35 @@
 }
 .color-bg{
     background-color: #FDF6F7;
+    display: block;
     padding: 6% 0;
-    margin-bottom: 5%;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+    width: 100%;
 }
 
 .clientes-satisfechos{
     margin-bottom: 6rem;
 }
-.opiniones{
-    display: flex;
-    flex-flow: row wrap;
+
+.flex__wrap-opiniones{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px,1fr));
+    gap: 2rem 2vw;
+    justify-content: center;
     margin: 3% 5% 2% 5%;
-    justify-content: space-around;
-    list-style: none;
-    align-items: flex-start;
-}
-.opiniones div {
-    display: inline-block;
-    width: 21rem;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 0.625rem;
-    box-shadow: 0px 0.25rem 1.875rem rgba(63, 34, 18, 0.1);
-}
-.opiniones span {
-    font-weight: bold;
-    display: inline-block;
-    margin-top: 1rem;
+    padding: 0 5vw 0 5vw;
+    div {
+        display: inline-block;
+        width: 20rem;
+        padding: 20px;
+        margin: 10px;
+        border-radius: 0.625rem;
+        box-shadow: 0px 0.25rem 1.875rem rgba(63, 34, 18, 0.1);
+    }
+    span {
+        font-weight: bold;
+        display: inline-block;
+        margin-top: 1rem;
+    }
 }

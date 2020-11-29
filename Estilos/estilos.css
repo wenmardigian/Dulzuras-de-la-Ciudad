@@ -5,13 +5,12 @@
   margin: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
+  scroll-behavior: smooth;
   font-family: "raleway", sans-serif;
   color: #3F2212;
+  text-decoration: none;
+  list-style: none;
   width: 100vw;
   overflow-x: hidden;
 }
@@ -122,9 +121,14 @@ nav ul li {
   flex-basis: 100%;
   flex: 1;
 }
-
 .flex__row__column p {
   padding: 1rem 0;
+}
+.flex__row__column img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .left-text {
@@ -133,13 +137,6 @@ nav ul li {
 
 .right-text {
   margin-left: 4rem;
-}
-
-.flex__row__column img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
 }
 
 @media screen and (max-width: 800px) {
@@ -163,7 +160,7 @@ nav ul li {
     margin: 2rem 0;
   }
 }
-.flex-wrap {
+.flex__wrap {
   list-style: none;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
@@ -176,22 +173,19 @@ nav ul li {
   margin-bottom: 3rem;
   padding: 0 5vw 0 5vw;
 }
-
-.flex-wrap li {
+.flex__wrap li {
   border-radius: 20px;
   padding-bottom: 1rem;
   display: inline-block;
   background-color: white;
 }
-
-.flex-wrap li img {
+.flex__wrap li p {
+  padding: 0 0.5rem 0 0.5rem;
+}
+.flex__wrap img {
   width: 100%;
   height: auto;
   margin-bottom: 0.5rem;
-}
-
-.flex-wrap li p {
-  padding: 0 0.5rem 0 0.5rem;
 }
 
 .center {
@@ -199,28 +193,25 @@ nav ul li {
   padding: 0 5vw 0 5vw;
 }
 
-.center-btn {
-  display: block;
-  margin: auto;
-}
-
-button {
+.button {
   background-color: #EF7B84;
   border: none;
   border-radius: 0.25rem;
   padding: 0.75rem 1.5rem;
-  transition: background-color 0.2s;
-}
-
-button:hover {
-  background-color: #A1333E;
-}
-
-button a {
   font-size: 1rem;
   font-weight: bold;
   text-decoration: none;
   color: white;
+  transition: background-color 0.2s;
+  margin: auto;
+}
+
+.button--left {
+  margin: 0 auto 0 0;
+}
+
+.button:hover {
+  background-color: #A1333E;
 }
 
 .background-circulos {
@@ -239,33 +230,34 @@ button a {
 
 .color-bg {
   background-color: #FDF6F7;
+  display: block;
   padding: 6% 0;
-  margin-bottom: 5%;
+  margin-bottom: 5rem;
+  margin-top: 5rem;
+  width: 100%;
 }
 
 .clientes-satisfechos {
   margin-bottom: 6rem;
 }
 
-.opiniones {
-  display: flex;
-  flex-flow: row wrap;
+.flex__wrap-opiniones {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 2rem 2vw;
+  justify-content: center;
   margin: 3% 5% 2% 5%;
-  justify-content: space-around;
-  list-style: none;
-  align-items: flex-start;
+  padding: 0 5vw 0 5vw;
 }
-
-.opiniones div {
+.flex__wrap-opiniones div {
   display: inline-block;
-  width: 21rem;
+  width: 20rem;
   padding: 20px;
   margin: 10px;
   border-radius: 0.625rem;
   box-shadow: 0px 0.25rem 1.875rem rgba(63, 34, 18, 0.1);
 }
-
-.opiniones span {
+.flex__wrap-opiniones span {
   font-weight: bold;
   display: inline-block;
   margin-top: 1rem;
@@ -339,11 +331,9 @@ button a {
   padding: 0 5vw 3rem 5vw;
   text-align: center;
 }
-
 .galeria-tortas-header h2 {
   padding-bottom: 1rem;
 }
-
 .galeria-tortas-header span {
   font-weight: bold;
 }
@@ -354,23 +344,16 @@ ul.galeria {
   grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
   gap: 0px;
 }
-
 ul.galeria img {
   width: 100%;
   height: auto;
   transition: transform 0.5s;
 }
-
-.galeria li {
+ul.galeria li {
   position: relative;
   overflow: hidden;
 }
-
-.galeria li:hover img {
-  transform: scale(1.1);
-}
-
-.galeria li div {
+ul.galeria li div {
   position: absolute;
   left: 0px;
   bottom: 0px;
@@ -380,6 +363,10 @@ ul.galeria img {
   color: white;
   margin: 0;
   opacity: 0;
+}
+
+.galeria li:hover img {
+  transform: scale(1.1);
 }
 
 .galeria li:hover div {
@@ -415,26 +402,44 @@ ul.galeria img {
 }
 
 .form-contacto {
+  margin: auto;
   margin-top: 3rem;
   padding: 0 5vw 0 5vw;
+  max-width: 600px;
   text-align: center;
 }
-
+.form-contacto h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
 .form-contacto p {
-  margin: 2rem 0 1rem 0;
+  margin: 1.75rem 0;
+}
+.form-contacto label {
+  display: block;
+  text-align: left;
+  margin-bottom: 0.2rem;
+}
+.form-contacto .form-control, .form-contacto textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: solid 1px #3F2212;
+  border-radius: 0.25rem;
 }
 
 .preguntas {
-  margin: 3rem 0 5rem 0;
+  margin: 5rem 0 5rem 0;
   padding: 0 5vw 0 5vw;
 }
-
 .preguntas h3 {
   text-align: center;
 }
-
 .preguntas h4 {
   padding: 1.25rem 0 0.625rem 0;
+}
+.preguntas p {
+  padding: 0 1.5rem;
 }
 
 footer {

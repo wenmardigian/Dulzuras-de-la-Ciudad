@@ -6,13 +6,12 @@
     margin: 0;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
+    scroll-behavior: smooth;
     font-family: 'raleway', sans-serif;
     color: #3F2212;
+    text-decoration: none;
+    list-style: none;
     width: 100vw;
     overflow-x: hidden;
 }
