@@ -1,0 +1,43 @@
+.galeria-tortas-header{
+    margin-top: 3rem;
+    padding: 0 5vw 3rem 5vw;
+    text-align: center;
+}
+.galeria-tortas-header h2{
+    padding-bottom: 1rem;
+}
+.galeria-tortas-header span{
+    font-weight: bold;
+}
+ul.galeria{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+    gap: 0px;
+}
+ul.galeria img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s;
+}
+.galeria li {
+    position: relative;
+    overflow: hidden;
+}
+.galeria li:hover img{
+    transform: scale(1.1);
+}
+.galeria li div{
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    padding: 0.75rem;
+    width: 100%;
+    background-color: rgba(63, 34, 18, 0.5);
+    color: white;
+    margin: 0;
+    opacity: 0;
+}
+.galeria li:hover div{
+    opacity: 1;
+}

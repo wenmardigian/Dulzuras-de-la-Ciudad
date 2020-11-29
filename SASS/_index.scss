@@ -1,0 +1,43 @@
+.background-circulos{
+    background-image: url("/Imagenes/Circulos_BG.png");
+    background-size: cover;
+}
+
+@media screen and (min-width: 1200px) {
+    .no-margin{
+        margin-top: -4rem;
+    }
+}
+#dulzuras{
+    max-width: 416px;
+}
+.color-bg{
+    background-color: #FDF6F7;
+    padding: 6% 0;
+    margin-bottom: 5%;
+}
+
+.clientes-satisfechos{
+    margin-bottom: 6rem;
+}
+.opiniones{
+    display: flex;
+    flex-flow: row wrap;
+    margin: 3% 5% 2% 5%;
+    justify-content: space-around;
+    list-style: none;
+    align-items: flex-start;
+}
+.opiniones div {
+    display: inline-block;
+    width: 21rem;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 0.625rem;
+    box-shadow: 0px 0.25rem 1.875rem rgba(63, 34, 18, 0.1);
+}
+.opiniones span {
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 1rem;
+}

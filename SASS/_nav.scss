@@ -1,0 +1,36 @@
+nav {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'raleway', sans-serif;
+    margin-top: 1rem;
+    position: relative;
+    right: 2.7rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #3F2212;
+}
+nav ul{
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    justify-content: center;
+    list-style: none;
+    position: relative;
+    align-items: center;
+}
+nav ul li{
+    display: inline;
+    padding: 0 4vw 0 4vw;
+}
+.logo-menu, .logo-menu div {
+    width: 189px;
+    height: 189px;
+    padding: 0;
+}
+.logo-menu div {
+    background: url('../Imagenes/Logo-Default.svg');
+}
+.logo-default div:hover {
+    background: url('../Imagenes/Logo-Home-Hover.svg');
+}

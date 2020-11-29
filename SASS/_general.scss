@@ -1,0 +1,25 @@
+.center{
+    text-align: center;
+    padding: 0 5vw 0 5vw;
+}
+.center-btn{
+    display: block;
+    margin: auto;
+}
+button {
+    background-color: #EF7B84;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.75rem 1.5rem;
+    transition: background-color 0.2s;
+    ;
+}
+button:hover{
+    background-color: #A1333E;
+}
+button a {
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
