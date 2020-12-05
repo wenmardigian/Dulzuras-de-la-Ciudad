@@ -1,52 +1,58 @@
 .productos{
     margin: 3rem 2vw 0 2vw;
     text-align: center;
-}
-.productos>div {
-    padding: 0 10vw 0 10vw;
-}
-.productos h2{
-    padding-bottom: 1rem;
-}
-.grid-productos {
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
-    gap: 2rem 2vw;
-    text-align: center ;
-    margin-top: 3rem;
-    margin-bottom: 5rem;
-}
-.grid-productos li{
-    box-shadow: 0px 0.25rem 1.4rem rgba(63, 34, 18, 0.08);
-    border-radius: 20px;
-    padding-bottom: 1rem;
-    transition: box-shadow, 0.5s;
-    overflow: hidden;
-}
-.grid-productos li:hover{
-    box-shadow: 0px 0.5rem 3rem rgba(63, 34, 18, 0.3);
-}
-.grid-productos li p{
-    padding: 0.75rem 1rem 0 1rem;
-}
-.grid-productos span{
-    font-weight: bold;
-}
-.grid-productos li img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.5s;
-}
-.grid-productos li:hover img {
-    transform: scale(1.05);
+    h2{
+        padding-bottom: 1rem;
+    }
+    .productos__header {
+        padding: 0 10vw 0 10vw;
+    }
+    .productos__grid{
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+        gap: 2rem 2vw;
+        text-align: center ;
+        margin-top: 3rem;
+        margin-bottom: 5rem;
+        div{
+            box-shadow: 0px 0.25rem 1.4rem rgba(63, 34, 18, 0.08);
+            border-radius: 1.25rem;
+            padding-bottom: 1rem;
+            transition: box-shadow, 0.5s;
+            overflow: hidden;
+            p{
+                padding: 0.75rem 1rem 0 1rem;
+            }
+            img {
+                width: 100%;
+                height: auto;
+                transition: transform 0.5s;
+            }
+        }
+        div:hover{
+        box-shadow: 0px 0.5rem 3rem rgba(63, 34, 18, 0.3);
+            img {
+            transform: scale(1.05);
+            }
+        }
+        span{
+            font-weight: bold;
+        }
+    }
 }
 @media screen and (max-width: 512px) {
-    .productos>div {
-        padding: 0 1vw 0 1vw;
-    }
-    .grid-productos {
+    .productos{
+        margin-top: 5rem;
+        .productos__header {
+            padding: 0 1vw 0 1vw;
+            .subtitle{
+            font-size: 0.9rem; 
+            }
+        }
+        .grid-productos {
         grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
         gap: 3rem 2vw;
+        }
     }
 }

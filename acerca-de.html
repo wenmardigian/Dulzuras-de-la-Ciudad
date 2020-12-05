@@ -7,9 +7,27 @@
     <link rel="stylesheet" href="Estilos/estilos.css">
 </head>
 <body>
-    <nav>
+    <!-- MENU -->
+    <div class= "menu-mobile">
+        <a href="/">
+            <img src="/Imagenes/Text-logo.svg">
+        </a>
+        <a href="#menu">
+            <img class="icon" src="/Imagenes/menu.svg">
+        </a>
+    </div>
+    <nav id="menu">
+        <a href="#">
+            <img class="icon-close" src="/Imagenes/cerrar.svg">
+        </a>
         <ul>
-            <li><a href="Productos.html">Productos</a></li>
+            <li>
+                <a>Productos</a>
+                <ul class="submenu">
+                    <li><a href="Productos.html">Pastelería</a></li>
+                    <li><a href="Productos.html">Chocolatería</a></li>
+                </ul>
+            </li>
             <li><a href="Tortas-decoradas.html">Tortas Decoradas</a></li>
             <li class="logo-menu">
                 <a href="/" class="logo-default">
@@ -23,13 +41,14 @@
         </ul>
     </nav>
     
+    <!-- ACERCA DE PATRI -->
     <main class="acerca-de">
         <h2 class="main-title">Acerca de</h2>
         <div class="flex__row">
             <div class="flex__row__column left-text">
                 <p class="subtitle"> Mi pasión por la decoración de tortas comenzó hace muchos años, mirando a Marta Ballina. Fué mi gran inspiración. Empecé haciendo tortas para la familia, nunca me imaginé que me dedicaría a esto. Luego de unos años empecé a estudiar decoración de tortas, pero aunque lo hacía con empeño y dedicación lo seguía tomando como un hobbie. Al año siguiente estudié panadería, luego pastelería y chocolatería... y no paré más. Ahí me dí cuenta que quería dedicarme por completo a la pastelería y chocolatería, de forma profesional, porque son mi gran pasión. </p>
             </div>
-            <div class="flex__row__column-img" id="foto-patri">
+            <div class="flex__row__column-img foto-patri">
                 <img src="/Imagenes/foto-patri.png" alt="Foto de perfil de patricia, emprendedora y pastelera de Dulzuras de la Ciudad">
             </div>
         </div>
@@ -39,21 +58,30 @@
             <p class="subtitle">Así es como trabajo, con mucha pasión y profesionalismo, usando buenas materias primas que se notan en los resultados, cuidando cada detalle, en optimas condiciones de higiene, y con el corazón.</p>
             <p class="subtitle"><span>Patri.</span></p>
         </div>
-    </main>
-    <section>
+        <!-- CERTIFICACIONES CURSOS -->
+        <section>
 
-    </section>
-    <section class="flex__row">
-        <div class="flex__row__column-img">
-            <img id="certi-alimentos" src="/Imagenes/Titulos/certi-manip-alimentos.png" alt="Certificado de manipulación de alimentos emitido en 2019, válido hasta el 22/05/2021">
-        </div>    
-        <div class="flex__row__column right-text">
-            <p class="subtitle"> El certificado de manipulación de alimentos es importantísimo para todos los que trabajamos en gastronomía. En ese curso aprendemos básicamente a procesar, manipular y conservar los alimentos de forma segura, para evitar enfermedades de transmisión alimentaria, y como mantener limpia y desinfectada el área de trabajo, para no afectar la salud de los consumidores.</p>
-        </div>
-    </section>
-    <section>
-        
-    </section>
+        </section>
+
+        <!-- CERTIFICADO ALIMENTOS -->
+        <section class="flex__row">
+            <div class="flex__row__column">
+                <img class="certi-alimentos" src="/Imagenes/Titulos/certi-manip-alimentos.png" alt="Certificado de manipulación de alimentos emitido en 2019, válido hasta el 22/05/2021">
+            </div>    
+            <div class="flex__row__column right-text">
+                <p class="subtitle"> El certificado de manipulación de alimentos es importantísimo para todos los que trabajamos en gastronomía. En ese curso aprendemos básicamente a procesar, manipular y conservar los alimentos de forma segura, para evitar enfermedades de transmisión alimentaria, y como mantener limpia y desinfectada el área de trabajo, para no afectar la salud de los consumidores.</p>
+            </div>
+        </section>
+
+        <!-- FOTOS CONFERENCIAS Y PASTELEROS -->
+        <section>
+            
+        </section>
+
+    </main>
+
+
+<!-- FOOTER -->
     <footer>
         <a href="#">Logo</a>
     </footer>

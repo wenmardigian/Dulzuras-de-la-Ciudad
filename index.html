@@ -8,23 +8,42 @@
     <link rel="stylesheet" href="Estilos/estilos.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="Productos.html">Productos</a></li>
-                <li><a href="Tortas-decoradas.html">Tortas Decoradas</a></li>
-                <li class="logo-menu">
-                    <a href="/" class="logo-default">
-                        <div>
-                            
-                        </div>    
-                    </a> 
-                </li>
-                <li><a href="Acerca-de.html">Acerca de</a></li>
-                <li><a href="Contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
+    <!-- MENU -->
+    <div class= "menu-mobile">
+        <a href="/">
+            <img src="/Imagenes/Text-logo.svg">
+        </a>
+        <a href="#menu">
+            <img class="icon" src="/Imagenes/menu.svg">
+        </a>
+    </div>
+    <nav id="menu">
+        <a href="#">
+            <img class="icon-close" src="/Imagenes/cerrar.svg">
+        </a>
+        <ul>
+            <li>
+                <a>Productos</a>
+                <ul class="submenu">
+                    <li><a href="Productos.html">Pastelería</a></li>
+                    <li><a href="Productos.html">Chocolatería</a></li>
+                </ul>
+            </li>
+            <li><a href="Tortas-decoradas.html">Tortas Decoradas</a></li>
+            <li class="logo-menu">
+                <a href="/" class="logo-default">
+                    <div>
+                        
+                    </div>    
+                </a> 
+            </li>
+            <li><a href="Acerca-de.html">Acerca de</a></li>
+            <li><a href="Contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
 
+    <!-- HEADER SECTION -->
+    <header>
         <section class="flex__row no-margin">
             <div class="flex__row__column left-text">
                 <h1><span>Las mejores</span> Tortas personalizadas y especialidades dulces <span>de Ciudad Evita</span></h1>
@@ -38,30 +57,34 @@
     </header>
 
     <main>
+
+        <!-- SECTION 1 - VARIEDAD DULZURAS -->
         <section class="flex__row flex__row--reverse">
             <div class="flex__row__column right-text">
                 <h2>Variedad de dulzuras artesanales hechas con amor </h2>
                 <p class="subtitle">Pastelería, repostería, chocolateria, mesas dulces, desayunos... y mucho más... </p>
                 <a class="button button--left" href="/productos.html">Ver menú de productos</a>
             </div>
-            <div class="flex__row__column" id="dulzuras">
-                <img src="Imagenes/Variedad-dulzuras.png" alt="Tarta de frutillas con crema">
+            <div class="flex__row__column dulzuras-img">
+                <img src="Imagenes/Variedad-dulzuras-1.png" alt="Tarta de frutillas con crema">
             </div>
         </section>
 
+        <!-- SECTION 2 - DESAYUNOS -->
         <section class="flex__row">
             <div class="flex__row__column left-text">
                 <h2>Regalá un dulce momento con un desayuno a medida</h2>
                 <p class="subtitle">Elegí los productos que más te gusten y armá tu desayuno a tu medida. Nosotros nos encargamos de la presentación y la entrega a domicilio. </p>
                 <a class="button button--left" href="/productos.html">Ver menú de productos</a>
             </div>
-            <div class="flex__row__column" id="dulzuras">
-                <img src="Imagenes/Desayunos.png" alt="Desayuno personalizado en bandeja con taza e infusiones, pastafrola, galletas caseras, obleas, cupcake y un brownie">
+            <div class="flex__row__column desayunos-img">
+                <img src="Imagenes/Desayunos-1.png" alt="Desayuno personalizado en bandeja con taza e infusiones, pastafrola, galletas caseras, obleas, cupcake y un brownie">
             </div>
         </section>
+
+        <!-- SECTION 3 - TORTAS PARA TODAS OCASIONES -->
         <section class="color-bg">
             <h2 class="center">Tortas personalizadas para toda ocasión </h2>
-            <h2 class="center">Tortas para todas las ocasiones</h2>
             <ul class="flex__wrap">
                 <li>
                     <img src="Imagenes/Cumple-ninos.png" alt="Torta decorada de personaje Sonic">
@@ -98,6 +121,7 @@
             <a class="button" href="/tortas-decoradas.html">Ver Galería de Tortas</a></button>
         </section>
 
+        <!-- SECTION 4 - OPINIONES CLIENTES -->
         <section class="clientes-satisfechos">
             <h2 class="center">Cientos de Clientes Satisfechos con nuestros productos </h2>
             <div class="flex__wrap-opiniones">
@@ -130,6 +154,7 @@
         </section>
     </main>
 
+    <!-- FOOTER -->
     <footer>
         <a href="#">Logo</a>
     </footer>

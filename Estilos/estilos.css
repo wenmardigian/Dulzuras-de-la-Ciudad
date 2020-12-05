@@ -62,6 +62,36 @@ a {
   color: #3F2212;
 }
 
+@media screen and (max-width: 700px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h1 span {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+    line-height: 1.2;
+  }
+}
 nav {
   text-align: center;
   text-transform: uppercase;
@@ -69,13 +99,8 @@ nav {
   margin-top: 1rem;
   position: relative;
   right: 2.7rem;
+  z-index: 1;
 }
-
-nav a {
-  text-decoration: none;
-  color: #3F2212;
-}
-
 nav ul {
   display: grid;
   grid-template-columns: repeat(5, auto);
@@ -84,10 +109,54 @@ nav ul {
   position: relative;
   align-items: center;
 }
-
 nav ul li {
   display: inline;
-  padding: 0 4vw 0 4vw;
+  padding: 0.5rem 4vw 0.5rem 4vw;
+  position: relative;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #3F2212;
+}
+nav ul li .submenu {
+  display: none;
+  position: absolute;
+  box-shadow: 0px 0.25rem 1.4rem rgba(63, 34, 18, 0.08);
+  border-radius: 1.25rem;
+  background-color: white;
+  padding: 0.75rem 0;
+  margin-top: 0.5rem;
+}
+nav ul li .submenu li {
+  display: block;
+  padding: 0.5rem 1rem;
+  text-align: left;
+}
+nav ul li .submenu li a {
+  line-height: 1;
+  padding: 0.4rem 0rem;
+}
+nav ul li .submenu li:hover {
+  background-color: #FDF6F7;
+}
+nav ul li:hover .submenu {
+  display: block;
+}
+nav .icon-close {
+  display: none;
+}
+
+.menu-mobile {
+  display: none;
+  padding: 0.5rem 1rem;
+}
+.menu-mobile img {
+  width: 70%;
+  height: auto;
+}
+.menu-mobile .icon {
+  height: 24px;
+  width: auto;
 }
 
 .logo-menu, .logo-menu div {
@@ -104,6 +173,63 @@ nav ul li {
   background: url("../Imagenes/Logo-Home-Hover.svg");
 }
 
+@media screen and (max-width: 900px) {
+  nav {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    margin-top: 0;
+    padding-top: 1rem;
+    top: 0;
+    background-color: white;
+    right: -100%;
+    transition: right 0.5s;
+  }
+  nav ul {
+    grid-template-columns: auto;
+    margin-top: 3rem;
+  }
+  nav ul li {
+    display: block;
+    margin: 0.2rem;
+  }
+  nav ul li .submenu {
+    position: relative;
+  }
+  nav ul li .submenu li {
+    text-align: center;
+  }
+  nav ul .logo-menu {
+    margin: auto;
+    order: -1;
+    margin-bottom: 1rem;
+  }
+  nav .icon-close {
+    display: inline-block;
+    position: absolute;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    width: 24px;
+    top: 0;
+    right: 0;
+  }
+
+  #menu:target {
+    display: block;
+    right: 0;
+  }
+
+  .menu-mobile {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0rem;
+    background-color: white;
+    z-index: 1;
+  }
+}
 .flex__row {
   display: flex;
   flex-flow: row wrap;
@@ -142,6 +268,7 @@ nav ul li {
 @media screen and (max-width: 800px) {
   .flex__row {
     flex-flow: column;
+    margin: 3rem 2%;
   }
 
   .flex__row--reverse {
@@ -156,7 +283,7 @@ nav ul li {
     margin-left: 0rem;
   }
 
-  .flex__column-img {
+  .flex__row__column img {
     margin: 2rem 0;
   }
 }
@@ -219,13 +346,16 @@ nav ul li {
   background-size: cover;
 }
 
-@media screen and (min-width: 1200px) {
-  .no-margin {
-    margin-top: -4rem;
-  }
-}
-#dulzuras {
+.dulzuras-img {
   max-width: 416px;
+  background-image: url(/Imagenes/Variedad-dulzuras-BG.png);
+  background-size: cover;
+}
+
+.desayunos-img {
+  max-width: 416px;
+  background-image: url(/Imagenes/Desayunos-BG.png);
+  background-size: cover;
 }
 
 .color-bg {
@@ -235,48 +365,56 @@ nav ul li {
   margin-bottom: 5rem;
   margin-top: 5rem;
   width: 100%;
+  text-align: center;
 }
 
 .clientes-satisfechos {
   margin-bottom: 6rem;
+  text-align: center;
 }
 
 .flex__wrap-opiniones {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   gap: 2rem 2vw;
-  justify-content: center;
-  margin: 3% 5% 2% 5%;
-  padding: 0 5vw 0 5vw;
+  max-width: 1150px;
+  margin: auto;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
 }
 .flex__wrap-opiniones div {
-  display: inline-block;
-  width: 20rem;
   padding: 20px;
-  margin: 10px;
   border-radius: 0.625rem;
   box-shadow: 0px 0.25rem 1.875rem rgba(63, 34, 18, 0.1);
+  text-align: left;
 }
-.flex__wrap-opiniones span {
+.flex__wrap-opiniones div span {
   font-weight: bold;
   display: inline-block;
   margin-top: 1rem;
 }
 
+@media screen and (min-width: 1200px) {
+  .no-margin {
+    margin-top: -4rem;
+  }
+}
+@media screen and (max-width: 512px) {
+  header {
+    margin-top: 5rem;
+  }
+}
 .productos {
   margin: 3rem 2vw 0 2vw;
   text-align: center;
 }
-
-.productos > div {
-  padding: 0 10vw 0 10vw;
-}
-
 .productos h2 {
   padding-bottom: 1rem;
 }
-
-.grid-productos {
+.productos .productos__header {
+  padding: 0 10vw 0 10vw;
+}
+.productos .productos__grid {
   list-style: none;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
@@ -285,43 +423,42 @@ nav ul li {
   margin-top: 3rem;
   margin-bottom: 5rem;
 }
-
-.grid-productos li {
+.productos .productos__grid div {
   box-shadow: 0px 0.25rem 1.4rem rgba(63, 34, 18, 0.08);
-  border-radius: 20px;
+  border-radius: 1.25rem;
   padding-bottom: 1rem;
   transition: box-shadow, 0.5s;
   overflow: hidden;
 }
-
-.grid-productos li:hover {
-  box-shadow: 0px 0.5rem 3rem rgba(63, 34, 18, 0.3);
-}
-
-.grid-productos li p {
+.productos .productos__grid div p {
   padding: 0.75rem 1rem 0 1rem;
 }
-
-.grid-productos span {
-  font-weight: bold;
-}
-
-.grid-productos li img {
+.productos .productos__grid div img {
   width: 100%;
   height: auto;
   transition: transform 0.5s;
 }
-
-.grid-productos li:hover img {
+.productos .productos__grid div:hover {
+  box-shadow: 0px 0.5rem 3rem rgba(63, 34, 18, 0.3);
+}
+.productos .productos__grid div:hover img {
   transform: scale(1.05);
+}
+.productos .productos__grid span {
+  font-weight: bold;
 }
 
 @media screen and (max-width: 512px) {
-  .productos > div {
+  .productos {
+    margin-top: 5rem;
+  }
+  .productos .productos__header {
     padding: 0 1vw 0 1vw;
   }
-
-  .grid-productos {
+  .productos .productos__header .subtitle {
+    font-size: 0.9rem;
+  }
+  .productos .grid-productos {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     gap: 3rem 2vw;
   }
@@ -352,8 +489,10 @@ ul.galeria img {
 ul.galeria li {
   position: relative;
   overflow: hidden;
+  line-height: 0;
 }
 ul.galeria li div {
+  line-height: normal;
   position: absolute;
   left: 0px;
   bottom: 0px;
@@ -373,30 +512,33 @@ ul.galeria li div {
   opacity: 1;
 }
 
+@media screen and (max-width: 512px) {
+  .galeria-tortas-header {
+    margin-top: 5rem;
+  }
+}
 .acerca-de {
   margin: 3rem 0 2rem;
 }
-
 .acerca-de h2 {
   text-align: center;
 }
 
-#foto-patri {
+.foto-patri {
   max-width: 450px;
   min-width: 330px;
 }
 
-#certi-alimentos {
+.certi-alimentos {
   max-width: 353px;
   border: 10px solid #3F2212;
 }
 
-.certi-alimentos {
-  background-color: #FDF6F7;
-  padding: 4rem 8% 4rem 8%;
-  margin: 0;
+@media screen and (max-width: 512px) {
+  .acerca-de {
+    margin-top: 5rem;
+  }
 }
-
 .btn-whatsapp {
   background-color: #25D366;
 }
@@ -419,8 +561,9 @@ ul.galeria li div {
   display: block;
   text-align: left;
   margin-bottom: 0.2rem;
+  font-size: 0.9rem;
 }
-.form-contacto .form-control, .form-contacto textarea {
+.form-contacto .form-contacto__form-control, .form-contacto textarea {
   width: 100%;
   padding: 0.5rem;
   margin-bottom: 1rem;
@@ -442,7 +585,12 @@ ul.galeria li div {
   padding: 0 1.5rem;
 }
 
-footer {
-  background-image: linear-gradient(45deg, #EF7B84, #3F2212);
-  height: 10rem;
+@media screen and (max-width: 900px) {
+  .preguntas p {
+    padding: 0;
+  }
+
+  .form-contacto {
+    margin-top: 5rem;
+  }
 }

@@ -31,6 +31,7 @@
 @media screen and (max-width:800px){
     .flex__row{
         flex-flow: column;
+        margin: 3rem 2%;
     } 
     .flex__row--reverse{
         flex-flow: column;
@@ -41,7 +42,7 @@
     .right-text{
         margin-left: 0rem;
     }
-    .flex__column-img{
+    .flex__row__column img{
         margin: 2rem 0;
     }
 }

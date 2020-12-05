@@ -19,11 +19,14 @@ ul.galeria{
     width: 100%;
     height: auto;
     transition: transform 0.5s;
+    
     }
     li {
     position: relative;
     overflow: hidden;
+    line-height: 0;
         div{
+        line-height: normal;
         position: absolute;
         left: 0px;
         bottom: 0px;
@@ -33,6 +36,7 @@ ul.galeria{
         color: white;
         margin: 0;
         opacity: 0;
+        
         }
     }
 }
@@ -41,4 +45,9 @@ ul.galeria{
 } 
 .galeria li:hover div{
     opacity: 1;
+}
+@media screen and (max-width: 512px) {
+    .galeria-tortas-header{
+        margin-top: 5rem;
+    }
 }

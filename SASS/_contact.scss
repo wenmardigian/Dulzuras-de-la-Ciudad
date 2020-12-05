@@ -20,8 +20,9 @@
       display: block;
       text-align: left;
       margin-bottom: 0.2rem;
+      font-size: 0.9rem;
    }
-   .form-control, textarea{
+   .form-contacto__form-control, textarea{
       width: 100%;
       padding: 0.5rem;
       margin-bottom: 1rem;;
@@ -42,5 +43,14 @@
    }
    p{
       padding: 0 1.5rem;
+   }
+}
+
+@media screen and (max-width: 900px){
+   .preguntas p{
+      padding: 0;
+   }
+   .form-contacto{
+      margin-top: 5rem;
    }
 }

@@ -1,19 +1,19 @@
 .acerca-de{
     margin: 3rem 0 2rem;
-}
-.acerca-de h2{
+    h2{
     text-align: center;
+    }
 }
-#foto-patri{
+.foto-patri{
     max-width: 450px;
     min-width: 330px;
 }
-#certi-alimentos{
+.certi-alimentos{
     max-width: 353px;
     border: 10px solid #3F2212;
 }
-.certi-alimentos{
-    background-color:#FDF6F7;
-    padding: 4rem 8% 4rem 8%;
-    margin:0;
+@media screen and (max-width: 512px) {
+    .acerca-de{
+        margin-top: 5rem;
+    }
 }

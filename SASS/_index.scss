@@ -3,13 +3,15 @@
     background-size: cover;
 }
 
-@media screen and (min-width: 1200px) {
-    .no-margin{
-        margin-top: -4rem;
-    }
-}
-#dulzuras{
+.dulzuras-img{
     max-width: 416px;
+    background-image: url(/Imagenes/Variedad-dulzuras-BG.png);
+    background-size: cover;
+}
+.desayunos-img{
+    max-width: 416px;
+    background-image: url(/Imagenes/Desayunos-BG.png);
+    background-size: cover;
 }
 .color-bg{
     background-color: #FDF6F7;
@@ -18,30 +20,43 @@
     margin-bottom: 5rem;
     margin-top: 5rem;
     width: 100%;
+    text-align: center;
 }
 
 .clientes-satisfechos{
     margin-bottom: 6rem;
+    text-align: center;
 }
 
 .flex__wrap-opiniones{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     gap: 2rem 2vw;
-    justify-content: center;
-    margin: 3% 5% 2% 5%;
-    padding: 0 5vw 0 5vw;
-    div {
-        display: inline-block;
-        width: 20rem;
+    max-width: 1150px;
+    margin: auto;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    div{
         padding: 20px;
-        margin: 10px;
         border-radius: 0.625rem;
         box-shadow: 0px 0.25rem 1.875rem rgba(63, 34, 18, 0.1);
+        text-align: left;
+        span {
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 1rem;
+        }
     }
-    span {
-        font-weight: bold;
-        display: inline-block;
-        margin-top: 1rem;
+
+}
+
+@media screen and (min-width: 1200px) {
+    .no-margin{
+        margin-top: -4rem;
+    }
+}
+@media screen and (max-width: 512px) {
+    header{
+        margin-top: 5rem;
     }
 }
