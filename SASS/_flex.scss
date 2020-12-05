@@ -31,45 +31,18 @@
 @media screen and (max-width:800px){
     .flex__row{
         flex-flow: column;
-        margin: 3rem 2%;
+        // margin: 0rem 2%;
+        margin: 0rem 0;
     } 
     .flex__row--reverse{
         flex-flow: column;
     }
-    .left-text{
-        margin-right: 0rem;
+    .flex__row__column{
+        margin-bottom: 2rem;
+        margin-left: 2%;
+        margin-right: 2%;
     }
-    .right-text{
-        margin-left: 0rem;
-    }
-    .flex__row__column img{
-        margin: 2rem 0;
-    }
-}
-.flex__wrap{
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(165px,1fr));
-    gap: 2rem 2vw;
-    justify-content: center;
-    max-width: 1006px;
-    text-align: center;
-    margin: auto;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    padding: 0 5vw 0 5vw;
-    li{
-    border-radius: 20px;
-    padding-bottom: 1rem;
-    display: inline-block;
-    background-color: white;
-        p{
-        padding: 0 0.5rem 0 0.5rem;
-        }
-    }
-    img{
-    width: 100%;
-    height: auto;
-    margin-bottom: 0.5rem;
+    .header__img{
+        margin: 0;
     }
 }
