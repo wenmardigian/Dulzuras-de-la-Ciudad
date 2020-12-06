@@ -356,6 +356,11 @@ nav .icon-close {
   margin-top: 3rem;
   margin-bottom: 3rem;
   padding: 0 5vw 0 5vw;
+  box-shadow: 0px 0rem 0rem rgba(63, 34, 18, 0);
+  transition: box-shadow, 0.5s;
+}
+.color-bg .flex__wrap > li:hover {
+  box-shadow: 0px 0.85rem 1.8rem rgba(63, 34, 18, 0.12);
 }
 @media screen and (max-width: 800px) {
   .color-bg .flex__wrap {
@@ -474,7 +479,7 @@ nav .icon-close {
 }
 @media screen and (max-width: 512px) {
   .productos .productos__grid div {
-    border-radius: 0rem;
+    border-radius: 0.5rem;
   }
 }
 .productos .productos__grid div p {

@@ -38,6 +38,8 @@
         margin-top: 3rem;
         margin-bottom: 3rem;
         padding: 0 5vw 0 5vw;
+        box-shadow: 0px 0rem 0rem rgba(63, 34, 18, 0);
+        transition: box-shadow, 0.5s;
         @media screen and (max-width:800px){
             grid-template-columns: repeat(auto-fit, minmax(135px,1fr));
             margin-top: 1rem;
@@ -51,6 +53,9 @@
             p{
             padding: 0 0.5rem 0 0.5rem;
             }
+        }
+        >li:hover{
+                box-shadow: 0px 0.85rem 1.rem rgba(63, 34, 18, 0.08);
         }
         img{
             width: 100%;

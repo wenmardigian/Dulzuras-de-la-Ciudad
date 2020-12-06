@@ -20,8 +20,3 @@
 .button:hover{
     background-color: $bordo
 }
-@each $name, $color in btn {
-    .btn--#{$name} {
-        background-color: $color;
-    }
-}
