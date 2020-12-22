@@ -1,4 +1,4 @@
-.galeria-tortas-header{
+.galeria-tortas__header{
     margin-top: 3rem;
     padding: 0 5vw 3rem 5vw;
     text-align: center;
@@ -10,7 +10,7 @@
     }
 }
 
-ul.galeria{
+.galeria{
     list-style: none;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));

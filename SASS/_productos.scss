@@ -13,13 +13,13 @@
     }
         
 }
-.productos{
+.productos__body{
     margin: 3rem 2vw 0 2vw;
     text-align: center;
     @media screen and (max-width: 512px) {
         margin-top: 1rem;
     }
-    .productos__grid{
+    .productos__body__grid{
         list-style: none;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
@@ -33,7 +33,7 @@
             margin-top: 1rem;
             margin-bottom: 1rem;
         }
-        div{
+        .productos__body__grid__producto{
             box-shadow: 0px 0.25rem 1.4rem rgba(63, 34, 18, 0.08);
             border-radius: 1.25rem;
             padding-bottom: 1rem;

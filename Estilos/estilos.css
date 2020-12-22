@@ -445,16 +445,16 @@ nav .icon-close {
   }
 }
 
-.productos {
+.productos__body {
   margin: 3rem 2vw 0 2vw;
   text-align: center;
 }
 @media screen and (max-width: 512px) {
-  .productos {
+  .productos__body {
     margin-top: 1rem;
   }
 }
-.productos .productos__grid {
+.productos__body .productos__body__grid {
   list-style: none;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
@@ -464,14 +464,14 @@ nav .icon-close {
   margin-bottom: 5rem;
 }
 @media screen and (max-width: 512px) {
-  .productos .productos__grid {
+  .productos__body .productos__body__grid {
     grid-template-columns: repeat(auto-fit, minmax(9.3rem, 1fr));
     gap: 0.75rem 2vw;
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
 }
-.productos .productos__grid div {
+.productos__body .productos__body__grid .productos__body__grid__producto {
   box-shadow: 0px 0.25rem 1.4rem rgba(63, 34, 18, 0.08);
   border-radius: 1.25rem;
   padding-bottom: 1rem;
@@ -479,57 +479,57 @@ nav .icon-close {
   overflow: hidden;
 }
 @media screen and (max-width: 512px) {
-  .productos .productos__grid div {
+  .productos__body .productos__body__grid .productos__body__grid__producto {
     border-radius: 0.5rem;
   }
 }
-.productos .productos__grid div p {
+.productos__body .productos__body__grid .productos__body__grid__producto p {
   padding: 0.75rem 1rem 0 1rem;
 }
-.productos .productos__grid div img {
+.productos__body .productos__body__grid .productos__body__grid__producto img {
   width: 100%;
   height: auto;
   transition: transform 0.5s;
 }
-.productos .productos__grid div:hover {
+.productos__body .productos__body__grid div:hover {
   box-shadow: 0px 0.5rem 3rem rgba(63, 34, 18, 0.3);
 }
-.productos .productos__grid div:hover img {
+.productos__body .productos__body__grid div:hover img {
   transform: scale(1.05);
 }
-.productos .productos__grid span {
+.productos__body .productos__body__grid span {
   font-weight: bold;
 }
 
-.galeria-tortas-header {
+.galeria-tortas__header {
   margin-top: 3rem;
   padding: 0 5vw 3rem 5vw;
   text-align: center;
 }
-.galeria-tortas-header h2 {
+.galeria-tortas__header h2 {
   padding-bottom: 1rem;
 }
-.galeria-tortas-header span {
+.galeria-tortas__header span {
   font-weight: bold;
 }
 
-ul.galeria {
+.galeria {
   list-style: none;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
   gap: 0px;
 }
-ul.galeria img {
+.galeria img {
   width: 100%;
   height: auto;
   transition: transform 0.5s;
 }
-ul.galeria li {
+.galeria li {
   position: relative;
   overflow: hidden;
   line-height: 0;
 }
-ul.galeria li div {
+.galeria li div {
   line-height: normal;
   position: absolute;
   left: 0px;
@@ -561,7 +561,7 @@ ul.galeria li div {
 .acerca-de h2 {
   text-align: center;
 }
-.acerca-de .certificaciones-title {
+.acerca-de .acerca-de__certificaciones {
   margin-top: 2rem;
   margin-bottom: 5rem;
   text-align: center;
@@ -618,27 +618,27 @@ ul.galeria li div {
   background-color: #25D366;
 }
 
-.form-contacto {
+.contacto__form {
   margin: auto;
   margin-top: 3rem;
   padding: 0 5vw 0 5vw;
   max-width: 600px;
   text-align: center;
 }
-.form-contacto h2 {
+.contacto__form h2 {
   text-align: center;
   margin-bottom: 2rem;
 }
-.form-contacto p {
+.contacto__form p {
   margin: 1.75rem 0;
 }
-.form-contacto label {
+.contacto__form label {
   display: block;
   text-align: left;
   margin-bottom: 0.2rem;
   font-size: 0.9rem;
 }
-.form-contacto .form-contacto__form-control, .form-contacto textarea {
+.contacto__form .contacto__form__form-control, .contacto__form textarea {
   width: 100%;
   padding: 0.5rem;
   margin-bottom: 1rem;
@@ -646,17 +646,17 @@ ul.galeria li div {
   border-radius: 0.25rem;
 }
 
-.preguntas {
+.contacto__preguntas {
   margin: 5rem 0 5rem 0;
   padding: 0 5vw 0 5vw;
 }
-.preguntas h3 {
+.contacto__preguntas h3 {
   text-align: center;
 }
-.preguntas h4 {
+.contacto__preguntas h4 {
   padding: 1.25rem 0 0.625rem 0;
 }
-.preguntas p {
+.contacto__preguntas p {
   padding: 0 1.5rem;
 }
 
